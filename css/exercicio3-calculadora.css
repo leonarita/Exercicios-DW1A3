@@ -1,0 +1,58 @@
+body {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calc {
+    border: solid 5px;
+    border-color: black;
+    width: 200px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+#campo {
+    height: 40px;
+    width: 180px;
+    margin-left: 5px;
+    font-size: 20px;
+    border: solid;
+    text-align: justify;
+    border-radius: 6px;
+    text-align: right;
+}
+
+#botao, #botao2 {
+    width: 40px;
+    height: 40px;
+    margin: 1px 1px 1px 1px;
+    margin-left: 5px;
+    background-color: darkgrey;
+    border-radius: 5px;
+    border: solid;
+}
+
+#botaom {
+    width: 40px;
+    height: 80px;       /* 80px */
+    position: absolute;
+    margin: 1px 1px 1px 1px;
+    margin-left: 9px;
+    background-color: darkgrey;
+    border-radius: 5px;
+    border: solid;
+}
+
+#botao0 {
+    width: 90px;
+    height: 40px;
+    margin: 1px 1px 1px 1px;
+    margin-left: 5px;
+    background-color: darkgrey;
+    border-radius: 5px;
+    border: solid;
+    
+}

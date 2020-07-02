@@ -1,0 +1,44 @@
+body {
+    background-color: lightslategrey;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    border: solid 5px;
+    border-color: orange;
+    background-color: darkgrey;
+    width: 500px;
+}
+
+#f {
+    align-self: center;
+}
+
+#t {
+    margin-left: 8px;
+}
+
+#in {
+    margin-left: 20px;
+    width: 40%; /* Tamanho do input : ocupará 20% do container */
+    border-radius: 1px;
+}
+
+#in2 {
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.button {
+    height: 30px;
+    width: 80px;
+    border-radius: 10%;
+    margin-left: 50px;
+}
