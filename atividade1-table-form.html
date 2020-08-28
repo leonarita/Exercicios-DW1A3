@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Atividade-1 (Table e Form) </title>
+
+        <style type="text/css">
+            table {
+                border: none;
+            }
+
+            th, td {
+                border: none;
+                background-color : #dddddd;
+                padding: 5px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    
+    <body style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 4rem; margin: 1rem 2rem 0;">
+        <form action="">
+
+            <h2> EXERCÍCIO 1 - FORMULÁRIO </h2>
+
+            <fieldset>
+                <legend> Dados do usuário </legend>
+                <br/>
+
+                <div class="containerInputs" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+                    <div class="input-bloc">
+                        <label for=""> Usuário &nbsp; </label>
+                        <input type="text" size="15" maxlength="30" required/>
+                    </div>
+                    <br/>
+
+                    <div class="input-bloc">
+                        <label for=""> Senha &nbsp; </label>
+                        <input type="password"/>
+                    </div>
+                    <br/>
+                </div>
+                <br/>
+
+                <div class="input-bloc">
+                    <label for=""> Biografia &nbsp; </label>
+                    <textarea name="bio" cols="25" rows="4"> Escreva sobre você... </textarea>
+                </div>
+                <br/>
+
+                <div class="input-bloc">
+                    <label for=""> Sexo &nbsp; </label>
+                    <input id="masculino" type="radio" name="sexo" value="masculino" checked="checked" /> 
+                    <label for="masculino"> Masculino &nbsp; </label> 
+                    <input id="feminino" type="radio" name="sexo" value="feminino" /> 
+                    <label for="feminino"> Feminino &nbsp; </label> 
+                    <input id="naoInformado" type="radio" name="sexo" value="naoInformado" />
+                    <label for="naoInformado"> Não informado &nbsp; </label> 
+                </div>
+                <br/>
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <legend> Dados de pesquisa </legend>
+                <br/>
+
+                <div class="input-bloc">
+                    <label for=""> Interesses &nbsp; </label>
+                    <input id="matematica" type="checkbox" name="materia" value="matematica" checked="checked" />
+                    <label for="matematica"> Matemática &nbsp; </label>
+                    <input id="linguagens" type="checkbox" name="materia" value="linguagens" />
+                    <label for="linguagens"> Linguagens &nbsp; </label>
+                    <input id="humanas" type="checkbox" name="materia" value="humanas" />
+                    <label for="humanas"> Ciências humanas &nbsp; </label>
+                    <input id="naturezas" type="checkbox" name="materia" value="naturezas" />
+                    <label for="naturezas"> Ciências de Natureza &nbsp; </label>
+                </div>
+                <br/>
+
+                <div class="containerInputs" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+                    <div class="input-bloc">
+                        <label for=""> Idade &nbsp; </label>
+                        <select name="idade" id="idade">
+                            <option value="crianca"> Menor de 16 anos </option>
+                            <option value="adolescente"> Entre 16 e 18 anos </option>
+                            <option value="normal"> Entre 18 e 60 anos </option>
+                            <option value="idoso"> Maior de 60 anos </option>
+                        </select>
+                    </div>
+                    <br/>
+
+                    <div class="input-bloc">
+                        <label for=""> Pesquisa &nbsp; </label>
+                        <input type="search" name="search" placeholder="Enter" />
+                    </div>
+                    <br/>
+            </div>
+            <br/>
+            </fieldset>
+            <br/>
+
+            <fieldset>
+                <legend> Dados de complemento </legend>
+                <br/>
+
+                <div class="input-bloc">
+                    <label for=""> Foto &nbsp; </label>
+                    <input type="file" name="avatar">
+                </div>
+                <br/>
+
+                <div class="input-bloc">
+                    <label for=""> Data de nascimento &nbsp; </label>
+                    <input type="date" name="depart">
+                </div>
+                <br/>
+
+                <div class="containerInputs" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+                    <div class="input-bloc">
+                        <label for=""> Email &nbsp; </label>
+                        <input type="email">
+                    </div>
+                    <br/>
+
+                    <div class="input-bloc">
+                        <label for=""> Dependentes &nbsp; </label>
+                        <input type="number" step="1" min="0" max="20">
+                    </div>
+                    <br/>
+
+                </div>
+                <br/>
+
+                <div class="input-bloc">
+                    <label for=""> Facebook &nbsp; </label>
+                    <input type="url">
+                </div>
+                <br/>
+
+            </fieldset>
+            <br/>
+
+            <input type="submit" value="Enviar"/>
+            <br/>
+            <br/>
+        </form>
+
+        <div>
+            <h2> EXERCÍCIO 1 - TABELA  </h2>
+
+            <table>
+                <caption> Lista de Cursos (de 31/08 a 04/09) </caption>
+                
+                <tr>
+                    <th></th>
+                    <th> Segunda </th>
+                    <th> Terça </th>
+                    <th> Quarta </th>
+                    <th> Quinta </th>
+                    <th> Sexta </th>
+                </tr>
+
+                <tr>
+                    <th> 08h - 10h </th>
+                    <td colspan="2"> Lógica </td>
+                    <td> UML </td>
+                    <td> Modelagem </td>
+                    <td> Administração </td>
+                </tr>
+
+                <tr>
+                    <th> 10h - 12h </th>
+
+                    <td colspan="5" rowspan="2"> 
+                        Programação (Fundamentos, Programação Orientada a Objetos, Interface Gráfica, conexão com Banco de Dados,
+                        Tópicos Avançados e Thread)
+                    </th>
+                </tr>
+
+                <tr>
+                    <th> 12h - 14h </th>
+                </tr>
+
+                <tr>
+                    <th> 14h - 16h </th>
+                    <td colspan="2"> Web </th>
+                    <td colspan="2"> Mobile </td>
+                    <td> Git </td>
+                </tr>
+
+                <tr>
+                    <th> 16h - 18h </th>
+                    <td colspan="2"> Engenharia de Software </th>
+                    <td rowspan="2"> Hardware </td>
+                    <td rowspan="2"> Redes </td>
+                    <td rowspan="2"> Segurança </td>
+                </tr>
+
+                <tr>
+                    <th> 18h - 20h </th>
+                    <td> Matemática </td>
+                    <td> Servidores </td>
+                </tr>
+
+                <tr>
+                    <th> 20h - 22h </th>
+                    <td rowspan="2"> Ciência de Dados </td>
+                    <td> Backend </td>
+                    <td> UX </td>
+                    <td> UI </td>
+                    <td> SQL </td>
+                </tr>
+
+                <tr>
+                    <th> 22h - 00h </th>
+                    <td> Frontend </td>
+                    <td colspan="3"> Inteligência Artificial </td>
+                </tr>
+            </table>
+
+            <div>
+                <br>
+                <p> Made with ❤ <br> by Leonardo Narita </p>
+            </div>
+        </div>
+    </body>
+
+</html>
