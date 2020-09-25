@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Testes de JS </title>
+    </head>
+
+    <body>
+        <h1 id="welcome"> , bem vindo ao meu site!</h1>
+
+        <script>    
+            var nome = window.prompt('Qual seu nome? ').toString()
+            window.document.getElementById('welcome').innerHTML = nome + window.document.getElementById('welcome').innerHTML
+        </script>
+
+        
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 4rem; margin: 1rem 2rem 0; margin-bottom: 4rem;">
+            <form action="">
+
+                <h2> EXERCÍCIO 1 - Soma </h2>
+
+                <fieldset>
+
+                    <br>
+                    <div>
+                        <label for=""> Primeiro número </label>
+                        <input type="number" name="" id="n1">
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for=""> Segundo número </label>
+                        <input type="number" name="" id="n2">
+                    </div>
+                    <br>
+
+                    <button onclick="somar()"> Somar </button>
+
+                </fieldset>
+
+            </form>
+
+            <form action="">
+                
+                <h2> EXERCÍCIO 2 - Fatorial </h2>
+
+                <fieldset>
+
+                    <br>
+                    <br>
+                    <div>
+                        <label for=""> Informe o número </label>
+                        <input type="number" name="" id="n">
+                    </div>
+                    <br>
+                    <br>
+
+                    <button onclick="calcularFatorial()"> Calcular fatorial </button>
+
+                </fieldset>
+
+            </form>
+        </div>
+
+        <div>
+            <h2> DESAFIO - Cacluladora </h2>
+
+            <section id="calc">
+
+                <br>
+                <input type="text" id="campo" placeholder="0"> 
+                <button id="botao"> AC </button>
+                <br><br>
+    
+                <div>
+    
+                    <button id="botao"> 9 </button>
+                    <button id="botao"> 8 </button>
+                    <button id="botao"> 7 </button>
+                    <button id="botao"> / </button>
+                    <button id="botao"> % </button>
+    
+                    <br>
+    
+                    <button id="botao"> 6 </button>
+                    <button id="botao"> 5 </button>
+                    <button id="botao"> 4 </button>
+                    <button id="botao"> - </button>
+                    <button id="botao"> x^y </button>
+    
+                    <br>
+    
+                    <button id="botao"> 3 </button>
+                    <button id="botao"> 2 </button>
+                    <button id="botao"> 1 </button>
+                    <button id="botao"> * </button>
+                    <button id="botao"> ! </button>
+    
+                    <br>
+    
+                    <button id="botao"> 0 </button>
+                    <button id="botao"> . </button>
+                    <button id="botao"> = </button>
+                    <button id="botao"> / </button>
+                    <button id="botao"> + </button>    
+                </div>
+                
+                <br>
+    
+            </section>
+        </div>
+
+        <script src="./js/atividade2-variables.js"></script>
+
+    </body>
+
+</html>
