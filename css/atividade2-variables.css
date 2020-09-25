@@ -1,0 +1,34 @@
+#calc {
+    border: solid 5px;
+    border-color: black;
+    width: 260px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+}
+
+#calc .headerCalc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#calc .headerCalc .campo {
+    height: 40px;
+    width: 180px;
+    margin-right: 5px;
+    font-size: 20px;
+    border: solid;
+    border-radius: 6px;
+    text-align: right;
+}
+
+.botao {
+    width: 45px;
+    height: 45px;
+    margin: 1px 1px 1px 1px;
+    margin-left: 1px;
+    margin-bottom: 2px;
+    background-color: darkgrey;
+    border-radius: 5px;
+    border: solid;
+}

@@ -21,3 +21,4 @@ function calcularFatorial() {
         window.alert(`O fatorial de ${n} é ${fat}`)
     }   
 }
+
