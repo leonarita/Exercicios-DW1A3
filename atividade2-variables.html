@@ -11,15 +11,9 @@
     </head>
 
     <body>
-        <h1 id="welcome"> , bem vindo ao meu site!</h1>
-
-        <script>    
-            var nome = window.prompt('Qual seu nome? ').toString()
-            window.document.getElementById('welcome').innerHTML = nome + window.document.getElementById('welcome').innerHTML
-        </script>
-
         
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 4rem; margin: 1rem 2rem 0; margin-bottom: 4rem;">
+
             <form action="">
 
                 <h2> EXERCÍCIO 1 - Soma </h2>
@@ -40,6 +34,11 @@
                     <br>
 
                     <button onclick="somar()"> Somar </button>
+
+                    <!--
+                    <br>
+                    <p class="resultadoSoma"></p>
+                    -->
 
                 </fieldset>
 
@@ -62,54 +61,59 @@
 
                     <button onclick="calcularFatorial()"> Calcular fatorial </button>
 
+                    <!--
+                    <br>
+                    <p class="resultadoFatorial"></p>
+                    -->
+
                 </fieldset>
 
             </form>
         </div>
 
-        <div>
-            <h2> DESAFIO - Cacluladora </h2>
+        <div style="margin: 1rem 2rem 0;">
+            <h2> DESAFIO - Calculadora </h2>
 
             <section id="calc">
 
                 <br>
                 <div class="headerCalc">
-                    <input type="text" class="campo" placeholder="0"> 
-                    <button class="botao"> AC </button>
+                    <input id="campo" type="text" class="campo" placeholder="0" readonly> 
+                    <button onclick="limpar()" class="botao"> AC </button>
                 </div>
                 <br>
     
                 <div class="buttons">
     
-                    <button class="botao" style="margin-left: 5px;"> 9 </button>
-                    <button class="botao"> 8 </button>
-                    <button class="botao"> 7 </button>
-                    <button class="botao"> / </button>
-                    <button class="botao"> % </button>
+                    <button onclick="pegarNumero('9')" class="botao" style="margin-left: 5px;"> 9 </button>
+                    <button onclick="pegarNumero('8')" class="botao"> 8 </button>
+                    <button onclick="pegarNumero('7')" class="botao"> 7 </button>
+                    <button onclick="realizarOperacao('/')" class="botao"> / </button>
+                    <button onclick="realizarOperacao('%')" class="botao"> % </button>
     
                     <br>
     
-                    <button class="botao" style="margin-left: 5px;"> 6 </button>
-                    <button class="botao"> 5 </button>
-                    <button class="botao"> 4 </button>
-                    <button class="botao"> - </button>
-                    <button class="botao"> x^y </button>
+                    <button onclick="pegarNumero('6')" class="botao" style="margin-left: 5px;"> 6 </button>
+                    <button onclick="pegarNumero('5')" class="botao"> 5 </button>
+                    <button onclick="pegarNumero('4')" class="botao"> 4 </button>
+                    <button onclick="realizarOperacao('-')" class="botao"> - </button>
+                    <button onclick="realizarOperacao('^')" class="botao"> x^y </button>
     
                     <br>
     
-                    <button class="botao" style="margin-left: 5px;"> 3 </button>
-                    <button class="botao"> 2 </button>
-                    <button class="botao"> 1 </button>
-                    <button class="botao"> * </button>
-                    <button class="botao"> ! </button>
+                    <button onclick="pegarNumero('3')" class="botao" style="margin-left: 5px;"> 3 </button>
+                    <button onclick="pegarNumero('2')" class="botao"> 2 </button>
+                    <button onclick="pegarNumero('1')" class="botao"> 1 </button>
+                    <button onclick="realizarOperacao('*')" class="botao"> * </button>
+                    <button onclick="gerarFatorial()" class="botao"> ! </button>
     
                     <br>
     
-                    <button class="botao" style="margin-left: 5px;"> 0 </button>
-                    <button class="botao"> . </button>
-                    <button class="botao"> = </button>
-                    <button class="botao"> / </button>
-                    <button class="botao"> + </button>    
+                    <button onclick="pegarNumero('0')" class="botao" style="margin-left: 5px;"> 0 </button>
+                    <button onclick="changePoint()" class="botao"> . </button>
+                    <button onclick="verResultado()" class="botao"> = </button>
+                    <button onclick="realizarOperacao('/')" class="botao"> / </button>
+                    <button onclick="realizarOperacao('+')" class="botao"> + </button>    
                 </div>
                 
                 <br>

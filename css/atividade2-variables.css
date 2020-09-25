@@ -1,7 +1,7 @@
 #calc {
     border: solid 5px;
     border-color: black;
-    width: 260px;
+    width: 360px;
     background-color: cornflowerblue;
     border-radius: 10px;
 }
@@ -14,7 +14,7 @@
 
 #calc .headerCalc .campo {
     height: 40px;
-    width: 180px;
+    width: 270px;
     margin-right: 5px;
     font-size: 20px;
     border: solid;
@@ -23,7 +23,7 @@
 }
 
 .botao {
-    width: 45px;
+    width: 65px;
     height: 45px;
     margin: 1px 1px 1px 1px;
     margin-left: 1px;
@@ -31,4 +31,6 @@
     background-color: darkgrey;
     border-radius: 5px;
     border: solid;
+    cursor: pointer;
+    font-size: 16px;
 }
