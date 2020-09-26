@@ -93,6 +93,7 @@ function realizarOperacao(simbolo) {
 
     operation = simbolo
     value2=0
+    point = false
     document.getElementById('campo').value += simbolo
 }
 
