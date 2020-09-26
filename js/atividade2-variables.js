@@ -56,9 +56,15 @@ function calcularFatorial(n) {
 function calcularExponenciacao(value1, value2) {
     var result=1
 
-    for (i=0; i<value2; i++){
-        result *= value1
+    if (value2 == 0)
+        result = 1
+    else if(value2>0) {
+        for (i=0; i<value2; i++){
+            result *= value1
+        }
     }
+    else
+        result = 0
 
     return result
 }
