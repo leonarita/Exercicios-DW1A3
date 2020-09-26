@@ -1,3 +1,9 @@
+function estabelecerContato() {
+    var name = window.prompt("Insira seu nome: ")
+    window.alert("Seja bem vindo, " + name + "!")
+    console.log(`Hello, ${name}`)
+}
+
 function somar() {
     var n1 = parseInt(window.document.getElementById('n1').value)
     var n2 = parseInt(window.document.getElementById('n2').value)
@@ -8,16 +14,21 @@ function somar() {
 function calcularFatorial() {
     var n = parseInt(window.document.getElementById("n").value)
 
-    if(n<1) {
+    if(n<0) {
         window.alert("Não é possível calcular fatorial de número negativo")
     }
-    else {
+    else {        
         var fat=1, temp = n
 
-        while(temp!=1) {
-            fat *= temp
-            temp--
-        }        
+        if(n===0)
+            fat=1
+
+        else {
+            while(temp!=1) {
+                fat *= temp
+                temp--
+            }        
+        }
 
         window.alert(`O fatorial de ${n} é ${fat}`)
     }
@@ -26,10 +37,19 @@ function calcularFatorial() {
 function calcularFatorial(n) {
     var fat=1, temp = n
 
-    while(temp!=1) {
-        fat *= temp
-        temp--
-    }     
+    if(n===0) {
+        fat=1
+    }
+    else if(n>0) {
+        while(temp!=1) {
+            fat *= temp
+            temp--
+        }        
+    }
+    else {
+        fat=0
+    }
+
     return fat
 }
 
@@ -87,27 +107,27 @@ function pegarNumero(numero) {
         if(point) {
             value2 = parseFloat(value2 + "." + numero)
             point = false
-            document.getElementById('campo').value += "." + numero
         }
-        else {
+        else 
             value2 = parseFloat(value2 + numero)
-            document.getElementById('campo').value += numero
-        }
+
+        document.getElementById('campo').value += numero
     }
 
 }
 
 function gerarFatorial() {
-    if(document.getElementById('campo').value!=="0") {
-        document.getElementById('campo').value += "!"
+    realizarOperacao("")
 
-        try {
-            value1 = calcularFatorial(parseInt(value2))
-        }
-        catch {
-            window.alert("Erro na conta")
-        }
+    document.getElementById('campo').value += "!"
+
+    try {
+        value1 = calcularFatorial(parseInt(value1))
     }
+    catch {
+        window.alert("Erro na conta")
+    }
+
     value2=0
 }
 
@@ -126,4 +146,5 @@ function limpar() {
 
 function changePoint() {
     point = true
+    document.getElementById('campo').value += "."
 }
