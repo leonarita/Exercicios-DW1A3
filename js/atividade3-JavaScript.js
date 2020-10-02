@@ -2,6 +2,11 @@ function calcularPreco() {
     var n1 = parseInt(window.document.getElementById('value').value)
     var n2 = parseInt(window.document.getElementById('kilo').value)
 
+    if(n1 < 1 || n2 < 1){
+        window.alert("Valor inválido")
+        return;
+    }
+
     window.document.getElementById('result').innerHTML = "Valor final: R$ " + (n1 * n2)
     window.alert(`Valor final: R$ ${n1 * n2}`)
 }
@@ -23,6 +28,11 @@ function calculateWeight() {
     var name = document.getElementById("name").value
     var height = document.getElementById("height").value
     var weight
+
+    if(height < 0.2){
+        window.alert("Valor inválido")
+        return;
+    }
 
     if(document.getElementById("masculino").checked) 
         weight = 22 * height * height
