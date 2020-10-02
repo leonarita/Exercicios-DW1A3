@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Javascript </title>
+    </head>
+    
+    <body>
+    
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 4rem; margin: 1rem 2rem 0; margin-bottom: 4rem;">
+            
+            <fieldset>
+                <div>
+                    <h1> Restaurante JS </h1>
+
+                    <div>
+                        <label for="value"> Buffet por Quilo: R$ </label>
+                        <input type="number" name="value" id="value">
+                    </div>
+
+                    <br>
+        
+                    <div>
+                        <label for="kilo"> Consumo do cliente (gr): </label>
+                        <input type="number" name="kilo" id="kilo">
+                    </div>
+
+                    <br>
+        
+                    <button onclick="calcularPreco()"> Calcular Preço </button>
+
+                    <p id="result"> Valor final: R$ </p>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div>
+                    <h1> Programa Cálculo de Peso Ideal </h1>
+
+                    <div>
+                        <label for="name"> Nome </label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <br>
+
+                    <div class="input-bloc">
+                        <label for=""> Sexo &nbsp; </label>
+                        <input id="masculino" type="radio" name="sexo" value="masculino" checked="checked" /> 
+                        <label for="masculino"> Masculino &nbsp; </label> 
+                        <input id="feminino" type="radio" name="sexo" value="feminino" /> 
+                        <label for="feminino"> Feminino &nbsp; </label> 
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="height"> Altura </label>
+                        <input type="number" name="height" id="height">
+                    </div>
+                    <br>
+
+                    <div>
+                        <button id="btnCalculate"> Calcular Peso Ideal </button>
+                        <button id="btClean"> Calcular Limpar Campos </button>
+                    </div>
+
+                    <p id="resultWeight">  </p>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div>
+                    <h1> Parquímetro </h1>
+        
+                    <div>
+                        <label for="money"> Insira o dinheiro: R$ </label>
+                        <input type="number" name="money" id="money">
+                    </div>
+
+                    <br>
+        
+                    <button onclick="calcularParquimetro()"> Realizar consulta </button>
+
+                    <p id="resultMoney">  </p>
+        
+                </div>
+            </fieldset>
+    
+            <fieldset>
+                <div>
+                    <h1> Chinchilas </h1>
+        
+                    <div>
+                        <label for="numberChinchilas"> Nº de chinchilas </label>
+                        <input type="number" name="numberChinchilas" id="numberChinchilas">
+                    </div>
+                    <br>
+
+                    <div>
+                        <label for="numberYears"> Nº de anos </label>
+                        <input type="number" name="numberYears" id="numberYears">
+                    </div>
+                    <br>
+
+                    <button onclick="calcularChimchilas()"> Calcular previsão de chimchilas</button>
+
+                    <p id="resultChinchilas">  </p>
+        
+                </div>
+            </fieldset>
+
+        </div>        
+
+        <script src="./js/atividade3-JavaScript.js"></script>
+        
+    </body>
+
+</html>
