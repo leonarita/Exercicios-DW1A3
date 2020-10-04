@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Objeto JS</title>
+    </head>
+
+    <body>
+
+        <fieldset style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: center;">
+                <h1> Exercício 1</h1>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 2rem;">
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div>
+                        <label for="item"> Insira um clube : </label>
+                        <input type="text" name="item" id="item">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <button onclick="saveItem()"> Salvar </button>
+                        <button onclick="listItems()"> Listar clubes </button>
+                        <button onclick="createTable()"> Montar tabela </button>
+                    </div>
+
+                    <br>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <ul id="list" style="display: block;">
+                    </ul>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <table id="tableClubs">
+                    </table>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: center;">
+                <h1> Exercício 2</h1>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 2rem;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div>
+                        <label for="limitDate"> Insira a data : </label>
+                        <input type="date" name="limitDate" id="limitDate">
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <label for="price"> Insira o preço : </label>
+                        <input type="number" name="price" id="price">
+                    </div>
+
+                    <br>
+
+                    <button onclick="generateReport()"> Enviar </button>
+
+                    <br>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p id="dataReport"></p>
+                    <br>
+                    <p id="priceReport"></p>
+                    <br>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset style="margin-bottom: 1rem;">
+            <div style="display: flex; justify-content: center;">
+                <h1> Exercício 3</h1>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 2rem;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+
+                    <div id="car">
+
+                    </div>
+
+                    <br>
+
+                    <div>
+                        <div>
+                            <label for=""> Ofertas &nbsp; </label>
+                        </div>
+    
+                        <div>
+                            <input id="op1" type="radio" name="op" value="op1" checked="checked" /> 
+                            <label for="op1"> À vista (5% de desconto) &nbsp; </label> 
+                        </div>
+    
+                        <div>
+                            <input id="op2" type="radio" name="op" value="op2" /> 
+                            <label for="op2"> À prazo (50% de entrada e parcelar em 12 vezes) &nbsp; </label> 
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <button onclick="calculatePrice()"> Consultar </button>
+
+                    <br>
+                </div>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <p id="result"></p>
+                    <br>
+                </div>
+        </fieldset>
+
+        <script src="./js/atividade4-objetoJS.js"></script>
+
+    </body>
+
+</html>
