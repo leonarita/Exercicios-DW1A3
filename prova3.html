@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+
+        <link rel="stylesheet" href="./css/prova.css">
+    </head>
+    
+    <body>
+
+        <form action="">
+            <h1>Cadastro</h1>
+            
+            <div class="input-container">
+                <label for="name">Nome</label>
+                <input id="name" type="text" required minlength="3" maxlength="30">
+            </div>
+
+            <div class="input-container">
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" size="11" required>
+            </div>
+
+            <div class="input-container">
+                <label for="dataNascimento">Data de nascimento</label>
+                <input id="dataNascimento" type="date" required>
+            </div>
+
+            <button type="button" onclick="validar()">Registrar conta</button>
+        </form>
+
+        <div class="result">
+            <h1 id="nome"></h1>
+            <p id="reg"></p>
+            <p id="idade"></p>
+        </div>
+        
+        <script src="./js/prova3.js"></script>
+    </body>
+
+</html>

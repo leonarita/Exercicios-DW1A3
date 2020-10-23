@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Parquímetro</title>
+
+        <link rel="stylesheet" href="./css/prova.css">
+    </head>
+    
+    <body>
+
+        <form action="">
+            <h1>Parquímetro</h1>
+
+            <div class="input-container">
+                <label for="placa">Informe a placa do automóvel</label>
+                <input type="text" name="placa" id="placa" step="0.1">
+            </div>
+            
+            <div class="input-container">
+                <label for="money">Insira o dinheiro: R$</label>
+                <input type="number" name="money" id="money" step="0.1">
+            </div>
+
+            <button type="button" onclick="calcularParquimetro()">Realizar consulta</button>
+        </form>
+
+        <div class="result">
+
+            <p id="resultMoney"></p>
+            
+        </div>
+
+        <div id="snackbar">Valor insuficiente</div>
+        
+        <script src="./js/prova2.js"></script>
+    </body>
+
+</html>
