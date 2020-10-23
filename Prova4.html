@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Prova DW I </title>
+
+    <link rel="stylesheet" href="./css/prova2.css">
+</head>
+<body>
+    
+    <div class="ex">
+    <div class="form">
+
+    <h1> Parquímetro </h1>
+    
+    <p> Insira seu nome
+        <input type="text" name="nome" id="nome" maxlength="30" />
+    </p>
+
+    <p style="display: flex; justify-content: space-around;"> Gênero:
+        <input style="width: 10%;" type="radio" id="rbMasculino" name="sexo" required />
+        <label for="rbMasculino">Masculino</label>
+        <input style="width: 10%;" type="radio" id="rbFeminino" name="sexo" />
+        <label for="rbFeminino">Feminino</label>
+    </p>
+
+    <p> Peso
+        <input type="number" step="0.1" name="peso" id="peso" min="0" maxlength="30" />
+    </p>
+    
+    <p> Altura
+        <input type="number" step="0.1" name="altura" id="altura" min="0" maxlength="30" />
+    </p>
+
+    <p> Idade
+        <input type="number" name="idade" id="idade" min="0" maxlength="30" />
+    </p>
+    
+    <button class="button" onclick="gerarRelatorio()"> Ver resultado </button>
+
+    </div>
+    </div>
+
+    <div class="total" id="total" style="display: none;">
+    </div>
+
+    <script src="./js/prova4.js"></script>
+
+</body>
+</html>

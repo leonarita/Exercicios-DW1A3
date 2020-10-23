@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova DW I </title>
+
+    <link rel="stylesheet" href="./css/prova2.css">
+</head>
+<body>
+    
+    <div class="ex">
+    <div class="form">
+
+    <h1>Lista de Compras</h1>
+    
+    <p> Insira seu nome
+        <input type="text" name="nome" id="nome" maxlength="30" />
+    </p>
+
+    <p> Insira o produto
+        <input type="text" name="produto" id="produto" maxlength="30" />
+    </p>
+
+    <p> Preço
+        <input type="number" step="0.1" name="preco" id="preco" min="0" maxlength="30" />
+    </p>
+
+    <p> Porcentual de desconto
+        <input type="number" step="0.1" name="desconto" id="desconto" max="100" />
+    </p>
+    
+    <div class="conjuntobotao">
+    <button class="button" onclick="inserirProduto()"> Inserir </button>
+    <button class="button" onclick="listarCompra()"> Listar </button>
+    <button class="button" onclick="limparCompra()"> Limpar lista </button>
+    </div>
+    </div>
+    </div>
+
+    <ul id="listaContas">
+    </ul>
+
+    <script src="./js/prova5.js"></script>
+
+</body>
+</html>
